@@ -1,0 +1,8 @@
+img = np.zeros((512,512,3),np.uint8)
+for x in range(0,1):
+    start_coord_1 = random.randrange(0,513)
+    start_coord_2 = random.randrange(0,513)
+    end_coord_1 = random.randrange(0,513)
+    end_coord_2 = random.randrange(0,513)
+    rand_line = cv.line(img,(start_coord_1,start_coord_2),(end_coord_1,end_coord_2),(0,0,0),1)
+    print(rand_line)

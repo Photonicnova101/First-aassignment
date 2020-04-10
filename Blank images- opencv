@@ -1,0 +1,9 @@
+import cv2
+import numpy as np
+#black blank image
+black_blank = np. zeros(shape=[512, 512, 3], dtype=np. uint8)
+cv2.imshow("Black Blank", black_blank)
+
+#white blank image
+white_blank = 255 * np. ones(shape=[512, 512, 3], dtype=np. uint8)
+cv2.imshow("White Blank", white_blank)

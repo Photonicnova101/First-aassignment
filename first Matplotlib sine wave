@@ -1,0 +1,23 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+#x-value max
+sample = 30
+
+#min values
+a1 = 15
+a2 = .02 
+a3 = 1
+a4 = -.5
+a5 = -.5
+a6 = -.5 
+a7 = .005
+
+x = np.arange(sample)
+
+function_values = a1 * np.sin(a2 * x) + a3 * np.sin(x) + a4 * np.cos(a5 * x) + a6 * x + a7 * x**2
+y = function_values
+
+
+plt.plot(x,y)
+plt.show()

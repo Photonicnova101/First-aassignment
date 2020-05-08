@@ -2,22 +2,20 @@ import numpy as np
 import matplotlib.pyplot as plt
 sample = 100
 start = -sample
-x = np.arange(start,sample,.00001)
-for a1 in np.arange(15,30,.00001):
-	for a2 in np.arange(.02,.03,.00001):
-		for a3 in np.arange(1,50,.00001):
-			for a4 in np.arange(-.5,.5,.00001):
-				for a5 in np.arange(-.5,.5,.00001):
-					for a6 in np.arange(-.5,.5,.00001):
-						for a7 in np.arange(-.5,.5,.00001):
-							a1 = a1 + .00001
-							a2 = a2 + .00001
-							a3 = a3 + .00001
-							a4 = a4 + .00001
-							a5 = a5 + .00001
-							a6 = a6 + .00001
-							a7 = a7 + .00001
+x = np.arange(start,sample,.01)
+for a1 in np.arange(15,30,5):
+	for a2 in np.arange(.02,.03,.01):
+		for a3 in np.arange(1,50,25):
+			for a4 in np.arange(-.5,.5,.5):
+				for a5 in np.arange(-.5,.5,.5):
+					for a6 in np.arange(-.5,.5,.5):
+						for a7 in np.arange(-.5,.5,.5):
 							function_values = a1 * np.sin(a2 * x) + a3 * np.sin(x) + a4 * np.cos(a5 * x) + a6 * x + a7 * x**2
 							y = function_values
 							plt.plot(x,y)
 plt.show()
+
+
+
+							
+							

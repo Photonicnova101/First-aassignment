@@ -1,0 +1,12 @@
+#erosion and dilation
+#this code is after the 5/7/2020 file 
+#test_1 trying to make cv2 read the plt
+
+import cv2
+import numpy as np
+
+input_img = cv2.imread(plt.plot(x,y), cv2.IMREAD_COLOR)
+kernel = np.ones((5,5),np.uint8)
+
+erosion_img = cv2.erode(
+dilation_img = 

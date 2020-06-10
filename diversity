@@ -4,9 +4,16 @@
 
 import cv2
 import numpy as np
+import Image
 
-input_img = cv2.imread(plt.plot(x,y), cv2.IMREAD_COLOR)
-kernel = np.ones((5,5),np.uint8)
+#converts the plot to a readable image
+plt.savefig('curve_image.png')
 
-erosion_img = cv2.erode(
-dilation_img = 
+Image.open('curve_image.png').save('curve_image.jpg','JPEG')
+
+input_image = cv2.imread('curve_image.jpg',cv2.IMREAD_COLOR)
+kernel =  np.ones((5,5), np.uint8)
+
+erosion_img = cv2.erode(input_image, kernel, iterations = 1)
+dilation_img = cv2.dilate(input_image, kernel, iterations = 1)
+

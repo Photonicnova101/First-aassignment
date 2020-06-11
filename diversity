@@ -36,12 +36,12 @@ for a1 in np.arange(15,30,5):
 
 #converts the plot to a readable image
 #put any location
-plt.savefig('C:\\Users\\Samgar\\curve_image.png')
+plt.savefig('C:\\Users\\Samga\\curve_image.png')
 
-input_image = cv2.imread('C:\\Users\\Samgar\\curve_image.png',cv2.IMREAD_COLOR)
+input_image = cv2.imread('C:\\Users\\Samga\\curve_image.png',cv2.IMREAD_COLOR)
 kernel = np.ones((5,5), np.uint8)
 
-
+#choose one or the other
 erosion_img = cv2.erode(input_image, kernel, iterations = 1)
 dilation_img = cv2.dilate(input_image, kernel, iterations = 1)
 

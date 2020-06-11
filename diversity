@@ -4,17 +4,45 @@
 
 import cv2
 import numpy as np
-import Image
+import matplotlib.pyplot as plt
+
+sample = 20
+start = -sample
+x = np.arange(start,sample,.01)
+
+
+for a1 in np.arange(15,30,5):
+
+	for a2 in np.arange(.02,.03,.01):
+
+		for a3 in np.arange(1,50,25):
+
+			for a4 in np.arange(-.5,.5,.5):
+
+				for a5 in np.arange(-.5,.5,.5):
+
+					for a6 in np.arange(-.5,.5,.5):
+
+						for a7 in np.arange(-.5,.5,.5):
+
+							function_values = a1 * np.sin(a2 * x) + a3 * np.sin(x) + a4 * np.cos(a5 * x) + a6 * x + a7 * x**2
+
+							y = function_values
+
+							plt.plot(x,y)
+
+
+
 
 #converts the plot to a readable image
 #put any location
 plt.savefig('C:\\Users\\Samgar\\curve_image.png')
 
-Image.open('curve_image.png').save('curve_image.jpg','JPEG')
+input_image = cv2.imread('C:\\Users\\Samgar\\curve_image.png',cv2.IMREAD_COLOR)
+kernel = np.ones((5,5), np.uint8)
 
-input_image = cv2.imread('curve_image.jpg',cv2.IMREAD_COLOR)
-kernel =  np.ones((5,5), np.uint8)
 
 erosion_img = cv2.erode(input_image, kernel, iterations = 1)
 dilation_img = cv2.dilate(input_image, kernel, iterations = 1)
 
+plt.show()

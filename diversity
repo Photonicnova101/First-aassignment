@@ -7,7 +7,8 @@ import numpy as np
 import Image
 
 #converts the plot to a readable image
-plt.savefig('curve_image.png')
+#put any location
+plt.savefig('C:\\Users\\Samgar\\curve_image.png')
 
 Image.open('curve_image.png').save('curve_image.jpg','JPEG')
 

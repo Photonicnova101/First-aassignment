@@ -45,4 +45,9 @@ kernel = np.ones((5,5), np.uint8)
 erosion_img = cv2.erode(input_image, kernel, iterations = 1)
 dilation_img = cv2.dilate(input_image, kernel, iterations = 1)
 
-plt.show()
+res =  cv2.resize(input_image,None, fx = 3, fy = 3, interpolation = cv2.INTER_CUBIC)
+
+#replace  _____ with the transformation that you've chosen
+
+cv2.imshow('image', _______) 
+ 

@@ -38,16 +38,26 @@ for a1 in np.arange(15,30,5):
 #put any location
 plt.savefig('C:\\Users\\Samga\\curve_image.png')
 
-input_image = cv2.imread('C:\\Users\\Samga\\curve_image.png',cv2.IMREAD_COLOR)
+img = cv2.imread('C:\\Users\\Samga\\curve_image.png',cv2.IMREAD_COLOR)
 kernel = np.ones((5,5), np.uint8)
 
 #choose one or the other
-erosion_img = cv2.erode(input_image, kernel, iterations = 1)
-dilation_img = cv2.dilate(input_image, kernel, iterations = 1)
+erosion_img = cv2.erode(img, kernel, iterations = 1)
+dilation_img = cv2.dilate(img, kernel, iterations = 1)
 
+#scaling
 res =  cv2.resize(input_image,None, fx = 3, fy = 3, interpolation = cv2.INTER_CUBIC)
 
+
+#translation
+rows,cols = img.shape
+	# shows image as grayscale and translates 75,100
+translation = np.float32([[1,0,75],[0,1,100]])
+
+dst = cv2.warpAffine(img,translation,(cols,rows))
+
 #replace  _____ with the transformation that you've chosen
+
 
 cv2.imshow('image', _______) 
  

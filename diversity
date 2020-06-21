@@ -56,6 +56,12 @@ translation = np.float32([[1,0,75],[0,1,100]])
 
 dst = cv2.warpAffine(img,translation,(cols,rows))
 
+#rotation by 90 degrees
+rotation = cv2.getRotationMatrix2D((cols/2,rows/2),90,1)
+dst = cv2.warpAffine(img,M,(cols,rows))
+
+
+
 #replace  _____ with the transformation that you've chosen
 
 

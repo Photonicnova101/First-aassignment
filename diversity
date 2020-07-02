@@ -24,9 +24,11 @@ for a1 in np.arange(15,30,5):
 					for a6 in np.arange(-.5,.5,.5):
 
 						for a7 in np.arange(-.5,.5,.5):
+						
+							
 
 							function_values = a1 * np.sin(a2 * x) + a3 * np.sin(x) + a4 * np.cos(a5 * x) + a6 * x + a7 * x**2
-
+							print(function_values)
 							y = function_values
 
 							plt.plot(x,y)

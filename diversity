@@ -36,6 +36,7 @@ for a1 in np.arange(15,30,5):
 ...                                                     print(a5)
 ...                                                     print(a6)
 ...                                                     print(a7)
+							print(" ")
 							
 							
 							

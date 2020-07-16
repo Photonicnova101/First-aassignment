@@ -74,6 +74,8 @@ dst = cv2.warpAffine(img,translation,(cols,rows))
 rotation = cv2.getRotationMatrix2D((cols/2,rows/2),90,1)
 dst = cv2.warpAffine(img,M,(cols,rows))
 
+#mordphological gradient
+gradient = cv2.morphologyEx(img, cv2.MORPH_GRADIENT, kernel)
 
 
 #replace  _____ with the transformation that you've chosen

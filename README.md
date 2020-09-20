@@ -1,2 +1,2 @@
-# First-assignment
-Bunch of arbitrary lines with increasing curvatures
+# Research stuff
+Machine learning with Gabor filters
